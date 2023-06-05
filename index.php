@@ -4,7 +4,7 @@
     $conn = $db->getConnection('db');
     if (is_array($conn)){
         echo json_encode($conn);
-    }
+    } 
 ?>
 <!DOCTYPE html>
 <html lang="en">
