@@ -1,7 +1,7 @@
 <?php 
     require_once('../../clases/Database.php');
     $db = new Database();
-    $conn = $db->getConnection('db2');
+    $conn = $db->getConnection('db');
     /*$sql = "INSERT INTO pais (nombre_pais) VALUES (?)";
     $stmt= $conn->prepare($sql);
     $nombrePais='Mexico2';
@@ -20,11 +20,11 @@
         $stmt->execute([$name, $surname, $sex]);
     */
     $data = [
-        ['Rusia'],
-        ['China'],
+        ['Colombia'],
+        ['Puerto Rico'],
     ];
 
-    $stmt = $conn->prepare("INSERT INTO pais (nombre_pais) VALUES (?)");
+    $stmt = $conn->prepare("INSERT INTO paises (nombre_pais) VALUES (?)");
     try {
         $conn->beginTransaction();
         foreach ($data as $row)
