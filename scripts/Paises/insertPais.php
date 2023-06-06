@@ -33,7 +33,7 @@
         }
         $conn->commit();
     }catch (Exception $e){
-        $pdo->rollback();
+        $conn->rollback();
         throw $e;
     }
     /*
